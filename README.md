@@ -1,18 +1,19 @@
-## Install deps
+# Shortkin.gq
 
+Shortkin.gq is an anonymous URL shortener based on LevelDB.
+
+# Run it!
+
+```
+docker-compose up
+```
+
+# Develop
+
+```
+git clone https://github.com/aarroyoc/shortkin.gq
+cd shortkin.gq
 npm install
-
-## Update deps
-
-ncu
-
-Modify package.json, upgrade npm, node and packages version
-
-npm update
-
-## Deploy
-
-git push heroku master
-git push origin master
-
-(or use Nginx)
+npm start
+npm test
+```

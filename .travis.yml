@@ -4,4 +4,4 @@ services:
 install:
  - docker build -t shortkingq .
 script:
- - docker run --rm -it shortkingq npx ava
+ - docker run --rm -it shortkingq npm test

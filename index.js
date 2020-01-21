@@ -6,7 +6,7 @@ let redir = require("./redir");
 let save = require("./save");
 let db = level("shortkin-db");
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 7291));
 
 app.use(express.static(__dirname + '/public'));
 app.use("/node_modules",express.static(__dirname + "/node_modules"));
