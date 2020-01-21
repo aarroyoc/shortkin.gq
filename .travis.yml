@@ -1,0 +1,7 @@
+language: minimal
+services:
+- docker
+install:
+ - docker build -t shortkingq .
+script:
+ - docker run --rm -it shortkingq npx ava
