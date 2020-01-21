@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>ShortKin.gq - The king of anonymous shorteners</title>
+		<link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+		<script src="/node_modules/material-design-lite/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="hubtraffic-domain-validation" content="f32ca36f43eb9b32"/>
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+			  <!-- Title -->
+			  <span class="mdl-layout-title">ShortKin.gq</span>
+			  <!-- Add spacer, to align navigation to the right -->
+			  <div class="mdl-layout-spacer"></div>
+			  <!-- Navigation. We hide it in small screens. -->
+			  <nav class="mdl-navigation mdl-layout--large-screen-only">
+				<span class="mdl-navigation__link">The king of anonymous shorteners</span>
+			  </nav>
+			</div>
+		  </header>
+		  <main class="mdl-layout__content">
+			<div class="page-content mdl-grid">
+				<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+					<!-- Shortener -->
+					<h4>Shorten your link!</h4>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="url" id="longUrl">
+						<label class="mdl-textfield__label" for="longUrl">URL...</label>
+					</div>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="short">Shorten!</button>
+					<div id="spinner" class="mdl-spinner mdl-js-spinner"></div> <!-- is-active -->
+					<a id="linkOutput"></a>
+					<br>
+					<p>ShortKin.gq is the king of anonymous shorteners. Paste your URL and you'll receive a new URL. This URL can be used everywhere and redirects to the original page. Use it on social networks, blogs, instant messaging, etc</p>
+					<ul>
+						<li>Anonymous - We don't collect any kind of data</li>
+						<li>Free and always free - We won't charge you anything</li>
+						<li>Fast - ShortKin.gq runs on the best cloud providers</li>
+						<li>No ads - Unlike other shorteners, ShortKin.gq doesn't have ads. Users won't notice anything.</li>
+					</ul>
+				</div>
+				<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+					<!-- King -->
+					<img src="/King.jpg" alt="ShortKin.gq">
+				</div>
+			</div>
+		  </main>
+		</div>
+		<script src="shortkingq.js"></script>
+	</body>
+</html>
