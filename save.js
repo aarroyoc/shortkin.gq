@@ -2,17 +2,17 @@ let gencode = require("./gencode");
 
 exports.saveUrl = function(db, url, cb){
 	let code = gencode.generateCode();
-	db.get(code, function(err,data){
+	db.get("SELECT * FROM url WHERE id = ?", [code], function(err,row){
 		if(err){
-			if(err.notFound){
-				db.put(code, url, function(err){
+			cb(err, null);
+		}else{
+			if(row === undefined){
+				db.run("INSERT INTO url VALUES (?, ?, 0)",[code, url], function(err){
 					cb(err, code);
 				});
 			}else{
-				cb(err,null);
+				saveUrl(db, url, cb);
 			}
-		}else{
-			saveUrl(db, url, cb);
 		}
 	});
 }

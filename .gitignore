@@ -7,4 +7,4 @@ npm-debug.log
 *.dev
 .DS_Store
 
-shortkin-db
+data/shortkingq.db

@@ -17,3 +17,8 @@ npm install
 npm start
 npm test
 ```
+# Backup
+
+```
+ansible-playbook backup.yml -i 192.168.0.156, --ask-pass
+```

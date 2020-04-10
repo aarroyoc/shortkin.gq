@@ -1,8 +1,20 @@
 const test = require('ava');
-let level = require("level");
+let sqlite3 = require("sqlite3");
 let redir = require("./redir");
 let save = require("./save");
-let db = level("shortkin-db-test");
+let db = new sqlite3.Database(":memory:");
+
+test.before.cb(t => {
+	db.run(`
+	CREATE TABLE IF NOT EXISTS url (
+		id TEXT,
+		url TEXT NOT NULL,
+		visits INT NOT NULL,
+		CHECK (visits >= 0),
+		PRIMARY KEY (id)
+	)
+	`,t.end);
+});
 
 test("Amazon.com homepage",t => {
 	var orig = "http://amazon.com";
@@ -31,8 +43,8 @@ test("Ebay.com", t => {
 test.cb("Save/Get", t => {
 	let url = "https://blog.adrianistan.eu";
 	save.saveUrl(db, url, function(err, code){
-		db.get(code, function(err, data){
-			t.is(url, data);
+		db.get("SELECT url FROM url WHERE id = ?", code, function(err, row){
+			t.is(url, row.url);
 			t.end();
 		});
 	});

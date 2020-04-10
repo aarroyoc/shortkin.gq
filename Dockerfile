@@ -1,4 +1,4 @@
-FROM node:12.14.1-buster
+FROM node:12.6.2
 
 WORKDIR /opt/shortkin.gq
 
@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-VOLUME /opt/shorkin.gq/shortkin-db
+VOLUME /opt/shorkin.gq/data
 
 EXPOSE 7291
 

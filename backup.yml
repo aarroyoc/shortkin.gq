@@ -1,0 +1,11 @@
+- hosts: all
+  remote_user: pi
+  become_method: sudo
+  name: "Backup Shortkin.gq"
+  tasks:
+
+   - name: Backup Shortkin.gq sqlite
+     fetch:
+      src: /home/pi/shortkin.gq/data/shortkingq.db
+      dest: backups/shortkingq.db
+      flat: yes

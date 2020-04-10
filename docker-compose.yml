@@ -4,6 +4,6 @@ services:
     restart: always
     build: ./
     volumes:
-     - ./shortkin-db:/opt/shortkin.gq/shortkin-db
+     - ./data:/opt/shortkin.gq/data
     ports:
      - 7291:7291
