@@ -1,4 +1,4 @@
-FROM node:12.18.3
+FROM node:12.18.2
 
 WORKDIR /opt/shortkin.gq
 
