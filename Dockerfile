@@ -1,4 +1,4 @@
-FROM node:15.15.0-alpine3.2
+FROM node:14.15.0-alpine3.2
 
 WORKDIR /opt/shortkin.gq
 
